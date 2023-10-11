@@ -1,2 +1,2 @@
 # CMSC447_Individual_Jameson_Carpenter
-Filler text for README
+All code for project is in the "master" branch
