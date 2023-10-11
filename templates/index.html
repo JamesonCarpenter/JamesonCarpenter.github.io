@@ -1,0 +1,139 @@
+<html> 
+<head> 
+	<title>Individual Assignment Jameson Carpenter</title> 
+</head> 
+<body> 
+	<h1 style="padding-top:50px">Student Information</h1> 
+	<table> 
+	<thead> 
+		<tr> 
+		<th style="padding-right:20px">Student ID</th> 
+		<th style="padding-right:150px">Name</th> 
+		<th style="padding-right:50px">Credits Earned</th> 
+		<th>Actions</th> 
+		</tr> 
+	</thead> 
+	<tbody> 
+		{% for row in data %} 
+		<tr> 
+		<td>{{ row[0] }}</td> 
+		<td>{{ row[1] }}</td> 
+		<td>{{ row[2] }}</td> 
+		<td> 
+			<form action="/update_student" method="post"> 
+			<input type="hidden" name="student_id" value="{{ row[0] }}"> 
+			<input type="text" name="name" value="{{ row[1] }}"> 
+			<input type="int" name="credits_earned" value="{{ row[2] }}"> 
+			<input type="submit" value="Update Student"> 
+			</form> 
+			<form action="/delete_student" method="post"> 
+			<input type="hidden" name="student_id" value="{{ row[0] }}"> 
+			<input type="submit" value="Delete Student"> 
+			</form> 
+		</td> 
+		</tr> 
+		{% endfor %} 
+	</tbody> 
+	</table> 
+	<h2>Enter a new Student</h2> 
+	<form action="/create_student" method="post" style="padding-bottom:100px"> 
+	<input type="text" name="name" placeholder="Name"> 
+	<input type="int" name="credits_earned" placeholder="Credits Earned"> 
+	<input type="submit" value="Create Student"> 
+	</form> 
+	
+	<h1>Instructor Information</h1> 
+	<table> 
+	<thead> 
+		<tr> 
+		<th style="padding-right:20px">Instructor ID</th> 
+		<th style="padding-right:140px">Name</th> 
+		<th style="padding-right:50px">Course Department</th> 
+		<th>Actions</th> 
+		</tr> 
+	</thead> 
+	<tbody> 
+		{% for row in data2 %} 
+		<tr> 
+		<td>{{ row[0] }}</td> 
+		<td>{{ row[1] }}</td> 
+		<td>{{ row[2] }}</td> 
+		<td> 
+			<form action="/update_instructor" method="post"> 
+			<input type="hidden" name="instructor_id" value="{{ row[0] }}"> 
+			<input type="text" name="name" value="{{ row[1] }}"> 
+			<input type="text" name="course_department" value="{{ row[2] }}"> 
+			<input type="submit" value="Update Instructor"> 
+			</form> 
+			<form action="/delete_instructor" method="post"> 
+			<input type="hidden" name="instructor_id" value="{{ row[0] }}"> 
+			<input type="submit" value="Delete Instructor"> 
+			</form> 
+		</td> 
+		</tr> 
+		{% endfor %} 
+	</tbody> 
+	</table> 
+	<h2>Enter a new Instructor</h2> 
+	<form action="/create_instructor" method="post" style="padding-bottom:100px"> 
+	<input type="text" name="name" placeholder="Name"> 
+	<input type="text" name="course_department" placeholder="Course Department"> 
+	<input type="submit" value="Create Instructor"> 
+	</form > 
+	
+	<h1>Course Information</h1> 
+	<table> 
+	<thead> 
+		<tr> 
+		<th style="padding-right:20px">Course ID</th> 
+		<th style="padding-right:150px">Name</th> 
+		<th style="padding-right:50px">Credits Worth</th>
+		<th style="padding-right:50px">Instructor</th>
+		<th style="padding-right:50px">Enrolled Students</th>
+		<th>Actions</th> 
+		</tr> 
+	</thead> 
+	<tbody> 
+		{% for row in data3 %} 
+		<tr> 
+		<td>{{ row[0] }}</td> 
+		<td>{{ row[1] }}</td> 
+		<td>{{ row[2] }}</td>
+		<td>{{ row[3] }}</td>
+		<td>{{ row[4] }}</td>
+		<td> 
+			<form action="/update_course" method="post"> 
+			<input type="hidden" name="course_id" value="{{ row[0] }}"> 
+			<input type="text" name="title" value="{{ row[1] }}"> 
+			<input type="int" name="credits_worth" value="{{ row[2] }}">
+			<input type="text" name="instructor" value="{{ row[3] }}">
+			<input type="submit" value="Update Course"> 
+			</form> 
+			<form action="/add_student" method="post"> 
+			<input type="hidden" name="course_id" value="{{ row[0] }}">
+			<input type="text" name="student_name" placeholder="Student Name">
+			<input type="submit" value="Add Student"> 
+			</form> 
+			<form action="/drop_student" method="post"> 
+			<input type="hidden" name="course_id" value="{{ row[0] }}">
+			<input type="text" name="student_name" placeholder="Student Name">
+			<input type="submit" value="Drop Student"> 
+			</form> 
+			<form action="/delete_course" method="post"> 
+			<input type="hidden" name="course_id" value="{{ row[0] }}"> 
+			<input type="submit" value="Delete Course"> 
+			</form> 
+		</td> 
+		</tr> 
+		{% endfor %} 
+	</tbody> 
+	</table> 
+	<h2>Enter a new Course</h2> 
+	<form action="/create_course" method="post" style="padding-bottom:100px"> 
+	<input type="text" name="title" placeholder="Name"> 
+	<input type="int" name="credits_worth" placeholder="Credits Worth">
+	<input type="text" name="instructor" placeholder="Instructor">
+	<input type="submit" value="Create Course"> 
+	</form> 
+</body> 
+</html> 
