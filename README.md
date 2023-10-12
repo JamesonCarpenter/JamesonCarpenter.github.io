@@ -15,7 +15,7 @@ Prerequisites
   4. Run the program.
      - From the virtual environment, while in the same directory as where "app_final.py" is; execute this command: **python app_final.py**
      - This command will create the create the webpage, locally hosted to your computer.
-    - Now just enter the url that the terminal says into a web browser, for myself the domain is "http://127.0.0.1:5000".
+     - Now just enter the url that the terminal says into a web browser, for myself the domain is "http://127.0.0.1:5000".
   5. Interact with the UI!
      - All setup should be done and now my assignment is visible.
 
