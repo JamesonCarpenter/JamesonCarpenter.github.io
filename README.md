@@ -20,7 +20,7 @@ Prerequisites
      - All setup should be done and now my assignment is visible.
 
 Frontend Usage
-  - All frontend is done with HTML some CSS.
+  - All frontend is done with HTML.
 
 Backend Usage
   - Backend was made using Python and PostgreSQL. PostgreSQL is the only thing not stored natively to the github, it is online and accessible to anyone if they have the connection.
