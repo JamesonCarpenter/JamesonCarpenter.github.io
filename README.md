@@ -13,7 +13,7 @@ Prerequisites
      - Now that we are in the virtual environment, run this command: **pip install -r requirements.txt**
       - This will ensure Flask and psycopg2 are installed which are neccessary for running this program.
   4. Run the program.
-     - From the virtual environment, while in the same directory as where "app_final.py" is; execute this command: **python app_final.py**
+    - From the virtual environment, while in the same directory as where "app_final.py" is; execute this command: **python app_final.py**
     - This command will create the create the webpage, locally hosted to your computer.
     - Now just enter the url that the terminal says into a web browser, for myself the domain is "http://127.0.0.1:5000".
   5. Interact with the UI!
