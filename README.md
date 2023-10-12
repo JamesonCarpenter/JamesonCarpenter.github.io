@@ -4,10 +4,10 @@ Prerequisites
       - I used the windows installer (64-bit) from python's website, pip is included: https://www.python.org/downloads/release/python-3120/
   2. Create a virtual environment with pip.
     - Pip should have it available already, just use command: **python -m pip install --user virtualenv**
-    - **Make sure you are create the virtual environment in the same folder as where the rest of the code is.**
-    - Now run: **virtualenv env_name**
+      - **Make sure you are create the virtual environment in the same folder as where the rest of the code is.**
+        - Now run: **virtualenv env_name**
       Pick any name for env_name but don't forget
-    - Now run: **env_name\Scripts\activate**
+          - Now run: **env_name\Scripts\activate**
       This is for windows, and will start the virtual environment.
   3. While in virtual environment, install requirements.
      - Now that we are in the virtual environment, run this command: **pip install -r requirements.txt**
